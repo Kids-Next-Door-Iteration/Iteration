@@ -4,11 +4,12 @@ import moment from 'moment';
 import NewEventModal from './NewEvent';
 import ThreadCard from './threadTitleCard';
 import axios from 'axios';
+import { useNavigate, Link } from "react-router-dom";
 
 function Dashboard() {
   const [dateState, setDateState] = useState(new Date())
   const [upcoming, setUpcoming] = useState({thread: []})
-  const [userName, setUserName] =useState('')
+  const [userName, setUserName] = useState('')
 
   const currentUserEmail = sessionStorage.getItem('email')
 
@@ -50,6 +51,7 @@ function Dashboard() {
       );     
     }  
   });
+
 
   return (
     <div id='dashboardComponent'>

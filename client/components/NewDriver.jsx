@@ -5,7 +5,7 @@ import axios from 'axios';
 import moment from 'moment';
 import Modal from 'react-modal';
 
-function NewEventModal(){    
+function NewDriverModal(){    
     //get today's date and format it for backend
     const today = new Date();
     const todayFormatted = moment(today).format('YYYY-MM-DD');
@@ -84,7 +84,7 @@ function NewEventModal(){
   }
     return(
         <div id='new-event'>
-            <button type="button" className="btn btn-secondary" id="thread-modal-button" onClick={openModal}>Add a new post</button>
+            <button type="button" className="btn btn-secondary" id="thread-modal-button" onClick={openModal}>Activate Driver</button>
             <Modal 
                 className="Modal__Bootstrap modal-dialog"
                 isOpen={modalIsOpen} 
@@ -93,7 +93,7 @@ function NewEventModal(){
                 <div className="modal-content">
                     
                     <div className="modal-header">
-                        <h4 className="modal-title">Create a New Post</h4>
+                        <h4 className="modal-title">Add Vehicle Information</h4>
                         <button type="button" className="close" id='modal-close-button' onClick={closeModal}>
                             <span aria-hidden="true">&times;</span>
                             <span className="sr-only"></span>
@@ -102,14 +102,14 @@ function NewEventModal(){
                     {!submitted &&
                         <div className='modal-form-open'> 
                         <div className="modal-body" id="new-thread-form">
-                            <label>Event Date</label>
+                            <label>Driver License</label>
                             <DatePicker selected={startDate} onChange={onChange} />
                             <label>Event Name</label>
                             <input type='text' onChange={onNameChange}></input>
                             <label>Location</label>
                             <input type='text' onChange={onLocationChange}></input>
                             <label>Message</label>
-                            <textarea rows='5' onChange={onThreadChange}></textarea>
+                            <input type='text' onChange={onThreadChange}></input>
                         </div>
                         <div className="modal-footer">
                         <button type="button" className="btn btn-primary" onClick={CreateNewThread}>Create Post</button>
@@ -133,4 +133,4 @@ function NewEventModal(){
     )
 }
 
-export default NewEventModal;
+export default NewDriverModal;
