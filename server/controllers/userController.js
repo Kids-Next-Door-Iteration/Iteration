@@ -178,22 +178,12 @@ userController.login =
 	};
 
 userController.getAddress =
-	async (
-		req,
-		res,
-		next
-	) => {
-		const email =
-			req
-				.params
-				.email;
+	async (req, res, next) => {
+		const email =req.params.email;
 
 		const queryAddress =
 			'SELECT first_name, last_name, address FROM users WHERE email = $1;';
-		const addressParam =
-			[
-				email,
-			];
+		const addressParam = [ email,];
 
 		try {
 			const userAddress =
@@ -217,5 +207,4 @@ userController.getAddress =
 		}
 	};
 
-module.exports =
-	userController;
+module.exports = userController;
