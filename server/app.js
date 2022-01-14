@@ -19,7 +19,7 @@ async function createApp(config) {
   app.use(morgan('combined', { stream: myStream }));
   app.use(cors());
   app.use(express.json());
-  app.use(urlencoded({ extended: true }));
+  app.use(express.urlencoded({ extended: true }));
 
   app.use('/api', apiRouter);
   app.use('/db/thread', threadRouter);
