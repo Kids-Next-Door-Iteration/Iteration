@@ -1,12 +1,26 @@
-const cookieController = {};
+const cookieController =
+	{};
 
-cookieController.setSSIDCookie = (req, res, next) => {
-  const id = res.locals.id;
-  res.cookie('ssid', id, {
-    secure: true,
-    maxAge: 3600000, // cookie should last one hour
-  });
-  return next();
-};
+cookieController.setSSIDCookie =
+	(
+		req,
+		res,
+		next
+	) => {
+		const id =
+			res
+				.locals
+				.id;
+		res.cookie(
+			'ssid',
+			id,
+			{
+				secure: true,
+				maxAge: 3600000, // cookie should last one hour
+			}
+		);
+		return next();
+	};
 
-module.exports = cookieController;
+module.exports =
+	cookieController;
