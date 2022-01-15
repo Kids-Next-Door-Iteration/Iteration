@@ -14,7 +14,11 @@ const keysRouter = require('./routes/keys');
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/build', express.static(path.join(__dirname, '../build')));
@@ -35,7 +39,9 @@ app.use((err, req, res, next) => {
   const defaultErr = {
     log: 'Express error handler caught unknown middleware error',
     status: 400,
-    message: { err: 'An error occurred ' },
+    message: {
+      err: 'An error occurred ',
+    },
   };
   const errorObj = Object.assign(defaultErr, err);
   console.log(errorObj);

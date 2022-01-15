@@ -6,7 +6,9 @@
   "scripts": {
     "start": "NODE_ENV=production nodemon server/server.js",
     "build": "NODE_ENV=production webpack",
-    "dev": "concurrently \"nodemon server/server.js\" \"webpack serve --open \""
+    "dev": "NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack serve --open \"",
+    "format:lint": "npx eslint --ext .jsx --ext .js . --fix",
+    "format:pretty": "prettier --write '**/*.{jsx,js,css,html}'"
   },
   "repository": {
     "type": "git",
@@ -48,7 +50,6 @@
     "concurrently": "^6.5.1",
     "css-loader": "^6.5.1",
     "eslint": "^8.5.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
@@ -59,7 +60,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
+    "prettier": "2.5.1",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

@@ -94,7 +94,8 @@ userController.login = async (req, res, next) => {
 userController.getAddress = async (req, res, next) => {
   const email = req.params.email;
 
-  const queryAddress = 'SELECT first_name, last_name, address FROM users WHERE email = $1;';
+  const queryAddress =
+    'SELECT first_name, last_name, address FROM users WHERE email = $1;';
   const addressParam = [email];
 
   try {
@@ -105,7 +106,7 @@ userController.getAddress = async (req, res, next) => {
     return next({
       log: `Error in userController.getAddress: ${err}`,
       message: {
-        err: 'Error in backend middleware function userController.getAddress'
+        err: 'Error in backend middleware function userController.getAddress',
       },
     });
   }
