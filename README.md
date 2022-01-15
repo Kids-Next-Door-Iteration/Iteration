@@ -41,6 +41,13 @@ API_KEY = ...
 - PG_Username and Password are used in userModel.js to connect to your database.  Enter your username and password strings in the .env file.
 - API_KEY should be set equal to your Google API Key and is used in the userInfo.jsx component to access the Google Maps API in order to display a user's location.
 
+### Scripts available
+To run the linter over all files:
+```npm run format:lint```
+
+To run prettier over all files:
+```npm run format:pretty```
+
 ## Features
 - Sign-up page to create an account
 - Log-in page to access your account
