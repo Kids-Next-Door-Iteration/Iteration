@@ -146,7 +146,7 @@ function Thread() {
 
   return (
     <div className='thread-page'>
-      <div classname='thread-page-header'>
+      <div className='thread-page-header'>
         <button
           className='btn btn-secondary'
           id='delete-thread-button'

@@ -35,7 +35,7 @@ threadReplyController.postThreadReply = async (req, res, next) => {
     return next({
       log: `Error in threadReplyController.postThreadReply: ${err}`,
       message: {
-        err: `Error in the backend from threadReplyController.postThreadReply`,
+        err: 'Error in the backend from threadReplyController.postThreadReply',
       },
     });
   }
@@ -53,7 +53,7 @@ threadReplyController.deleteThreadReply = async (req, res, next) => {
     return next({
       log: `Error in threadReplyController.deleteThreadReply: ${err}`,
       message: {
-        err: `Error in the backend from threadReplyController.deleteThreadReply`,
+        err: 'Error in the backend from threadReplyController.deleteThreadReply',
       },
     });
   }
