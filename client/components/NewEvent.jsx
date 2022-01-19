@@ -111,13 +111,13 @@ function NewEventModal() {
             <div className='modal-form-open'>
               <div className='modal-body' id='new-thread-form'>
                 <label>Event Date</label>
-                <DatePicker selected={startDate} onChange={onChange} />
+                <DatePicker selected={startDate} onChange={onChange} id='date-field'/>
                 <label>Event Name</label>
-                <input type='text' onChange={onNameChange}></input>
+                <input id='eventName-field' type='text' onChange={onNameChange}></input>
                 <label>Location</label>
-                <input type='text' onChange={onLocationChange}></input>
+                <input id='location-field' type='text' onChange={onLocationChange}></input>
                 <label>Message</label>
-                <textarea rows='5' onChange={onThreadChange}></textarea>
+                <textarea id='message-field' rows='5' onChange={onThreadChange}></textarea>
               </div>
               <div className='modal-footer'>
                 <button

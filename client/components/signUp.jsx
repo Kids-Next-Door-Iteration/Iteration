@@ -51,6 +51,7 @@ function signUp() {
         <label>
           Email:
           <input
+            id='email-field'
             className='form-control login-input'
             type='text'
             name='email'
@@ -60,6 +61,7 @@ function signUp() {
         <label>
           Password:
           <input
+            id='password-field'
             className='form-control login-input'
             type='password'
             name='password'
@@ -69,6 +71,7 @@ function signUp() {
         <label>
           First name:
           <input
+            id='firstName-field'
             className='form-control login-input'
             type='text'
             name='firstName'
@@ -78,6 +81,7 @@ function signUp() {
         <label>
           Last name:
           <input
+            id='lastName-field'
             className='form-control login-input'
             type='text'
             name='lastName'
@@ -87,6 +91,7 @@ function signUp() {
         <label>
           Access code:
           <input
+            id='accessCode-field'
             className='form-control login-input'
             type='text'
             name='accessCode'
@@ -96,6 +101,7 @@ function signUp() {
         <label>
           Address:
           <input
+            id='address-field'
             className='form-control login-input'
             type='text'
             name='address'
@@ -105,6 +111,7 @@ function signUp() {
         <label>
           Phone number:
           <input
+            id='phone-field'
             className='form-control login-input'
             type='text'
             name='phoneNum'
