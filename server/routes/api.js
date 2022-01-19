@@ -19,11 +19,13 @@ router.post('/login', login, setSSIDCookie, (req, res) => {
   // steps: login middleware to verify user data in db, session middleware, cookie middleware to set cookie
   // inputs: email, password
   // res.status(200).send('Successfully logged in');
-  return res.status(200).json({ isMatch: res.locals.isMatch });
+  return res.status(200).json({
+    isMatch: res.locals.isMatch,
+  });
 });
 
 router.get('/:email', getAddress, (req, res) => {
-  return res.status(200).json(res.locals.address)
+  return res.status(200).json(res.locals.address);
 });
 
 module.exports = router;

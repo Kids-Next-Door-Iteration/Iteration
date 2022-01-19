@@ -15,7 +15,6 @@ function Dashboard() {
   const changeDate = (e) => {
     setDateState(e);
   };
-
   useEffect(() => {
     axios
       .get('/db/thread/upcoming')

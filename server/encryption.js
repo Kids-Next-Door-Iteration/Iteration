@@ -19,4 +19,7 @@ const comparePassword = async (rawPassword, hashedPassword) => {
     console.log(err);
   }
 };
-module.exports = { hashPassword, comparePassword };
+module.exports = {
+  hashPassword,
+  comparePassword,
+};

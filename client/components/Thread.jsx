@@ -8,7 +8,9 @@ function Thread() {
   const [eventName, setEventName] = useState('');
   const [replyClicked, setReplyClicked] = useState(false);
   const [currentThreadId, setCurrentThreadId] = useState('');
-  const [posts, setPosts] = useState({ posts: [] });
+  const [posts, setPosts] = useState({
+    posts: [],
+  });
   const [eventId, setEventId] = useState('');
 
   //get the current event's id
@@ -37,7 +39,9 @@ function Thread() {
         const sorted = messageArray.sort(sortMessages);
         console.log(sorted);
         setEventName(res.data[0]['event_name']);
-        setPosts({ posts: sorted });
+        setPosts({
+          posts: sorted,
+        });
       })
       .catch((e) => {
         console.log(e);
