@@ -9,8 +9,6 @@ beforeAll(async () => {
   app = await createApp();
 });
 
-afterAll(async () => {});
-
 describe('GET /db/message', () => {
   describe('when make a get request over /db/message/', () => {
     it('should respond with a 200 status code', async () => {
