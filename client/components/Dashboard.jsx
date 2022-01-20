@@ -42,6 +42,7 @@ function Dashboard() {
     return (
       <ThreadCard
         event_id={event._id}
+        key={event._id}
         date={event.date}
         event_name={event.event_name}></ThreadCard>
     );

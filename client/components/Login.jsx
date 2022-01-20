@@ -60,7 +60,7 @@ function Login() {
       </button>
       {hasError && <p>Invalid Email or Password</p>}
       <p>
-        Don't have an account? Click{' '}
+        Do not have an account? Click
         <Link id='signUp-link' to={'/signup'}>
           here
         </Link>{' '}
