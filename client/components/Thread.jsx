@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import moment from 'moment';
-import UserInfo from './userInfo';
+import UserInfo from './UserInfo';
 
 function Thread() {
   const [message, setMessage] = useState('');

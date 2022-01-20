@@ -25,17 +25,20 @@ To launch the program in production mode:
 ```sh
 npm run start
 ```
-To launch the program in development mode:
+To launch the backend:
 ```sh
-npm run dev
+npm run server:run
+```
+To launch the frontend in development mode:
+```sh
+npm run build:dev
 ```
 
 Add a .env file with the following info:
 ```sh
-PG_Username = ...
-PG_Password = ...
-PG_Source = ...
-API_KEY = ...
+PORT
+PG_URI
+API_KEY
 ```
 
 - PG_Username and Password are used in userModel.js to connect to your database.  Enter your username and password strings in the .env file.
