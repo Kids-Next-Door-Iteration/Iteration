@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import NewDriverModal from "./DriverInfoModal";
+import ProfilePic from "../images/profilepic.jpg";
 
 
 const Profile = () => {
@@ -57,14 +58,14 @@ const Profile = () => {
   // }
 
   return (
-
     <div className="container rounded bg-white mt-5 mb-5">
       <div className="row">
         <div className="col-md-3 border-right">
+       
         <div class="d-flex flex-column align-items-center text-center p-3 py-5">
         </div>
           <div className="d-flex flex-column align-items-center text-center p-3 py-5">
-              
+          <div><img className= "rounded-circle mt-5" src={ProfilePic} width="150px"></img></div>
             <span className='font-weight-bold'>
               {getFirstName} {getLastName}
               </span>
