@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 require('dotenv').config();
 
-const PG_URI = `postgres://${process.env.PG_Username}:${process.env.PG_Password}@${process.env.PG_Source}/${process.env.PG_Username}`;
+const PG_URI = process.env.PG_URI;
 
 const pool = new Pool({
   connectionString: PG_URI,

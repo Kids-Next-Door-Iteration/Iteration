@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import moment from 'moment';
 import NewEventModal from './NewEvent';
-import ThreadCard from './threadTitleCard';
+import ThreadCard from './ThreadTitleCard';
 import axios from 'axios';
 
 function Dashboard() {
