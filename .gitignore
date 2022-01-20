@@ -3,5 +3,5 @@ build
 .env
 .DS_Store
 .sass-cache
-.app.log
+app.log
 .vscode
