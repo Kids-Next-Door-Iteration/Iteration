@@ -50,7 +50,7 @@ threadController.getUpcomingEvents = async (req, res, next) => {
   const paramsUpcoming = [dateNow];
 
   const queryUpcoming =
-    'SELECT _id, event_name, TO_CHAR(date, \'Mon DD\') as date FROM event WHERE date >= $1;';
+    "SELECT _id, event_name, TO_CHAR(date, 'Mon DD') as date FROM event WHERE date >= $1;";
 
   try {
     const upcomingEventData = await db.query(queryUpcoming, paramsUpcoming);
@@ -72,7 +72,7 @@ threadController.getThreadMessages = async (req, res, next) => {
   const threadParam = [id];
 
   const queryThreadMessages =
-    'SELECT threads._id, threads.thread, TO_CHAR(threads.date, \'Mon DD, YYYY\') as date, threads.thread_id, event.event_name, users.email, users.first_name, users.last_name FROM threads INNER JOIN event ON threads.event_id = event._id INNER JOIN users ON threads.user_id = users._id WHERE threads.event_id = $1;';
+    "SELECT threads._id, threads.thread, TO_CHAR(threads.date, 'Mon DD, YYYY') as date, threads.thread_id, event.event_name, users.email, users.first_name, users.last_name FROM threads INNER JOIN event ON threads.event_id = event._id INNER JOIN users ON threads.user_id = users._id WHERE threads.event_id = $1;";
 
   try {
     const threadMessages = await db.query(queryThreadMessages, threadParam);
