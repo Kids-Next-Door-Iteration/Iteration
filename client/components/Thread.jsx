@@ -99,7 +99,7 @@ function Thread() {
 
   const postList = posts['posts'].map((msg) => {
     return (
-      <div className='post'>
+      <div className='post' key={msg._id}>
         <div className='post-header'>
           <UserInfo
             username={msg['first_name'] + ' ' + msg['last_name']}
