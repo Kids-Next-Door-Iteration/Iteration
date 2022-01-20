@@ -8,7 +8,8 @@
     "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack serve --open \"",
     "format:lint": "npx eslint --ext .jsx --ext .js . --fix",
-    "format:pretty": "prettier --write '**/*.{jsx,js,css,html}'"
+    "format:pretty": "prettier --write '**/*.{jsx,js,css,html}'",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "babel-loader": "^8.2.3",
     "concurrently": "^6.5.1",
     "css-loader": "^6.5.1",
+    "cypress": "^9.3.0",
     "eslint": "^8.5.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",

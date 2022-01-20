@@ -14,7 +14,7 @@ function Login() {
 
   const onPasswordChange = (e) => {
     const newValue = e.target.value;
-    setPasswordValue(ewValue);
+    setPasswordValue(newValue);
   };
 
   const login = () => {
@@ -40,12 +40,14 @@ function Login() {
       <div className='form-group' id='login-form'>
         <p>Email</p>
         <input
+          data-cy='login-email'
           className='form-control login-input'
           type='text'
           onChange={onEmailChange}
         />
         <p>Password</p>
         <input
+          data-cy='login-password'
           className='form-control login-input'
           type='password'
           onChange={onPasswordChange}
@@ -60,7 +62,7 @@ function Login() {
       </button>
       {hasError && <p>Invalid Email or Password</p>}
       <p>
-        Don't have an account? Click{' '}
+        Don&apos;t have an account? Click{' '}
         <Link id='signUp-link' to={'/signup'}>
           here
         </Link>{' '}
