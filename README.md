@@ -25,20 +25,31 @@ To launch the program in production mode:
 ```sh
 npm run start
 ```
-To launch the program in development mode:
+To launch the backend:
 ```sh
-npm run dev
+npm run server:run
+```
+To launch the frontend in development mode:
+```sh
+npm run build:dev
 ```
 
 Add a .env file with the following info:
 ```sh
-PG_Username = ...
-PG_Password = ...
-API_KEY = ...
+PORT
+PG_URI
+API_KEY
 ```
 
 - PG_Username and Password are used in userModel.js to connect to your database.  Enter your username and password strings in the .env file.
 - API_KEY should be set equal to your Google API Key and is used in the userInfo.jsx component to access the Google Maps API in order to display a user's location.
+
+### Scripts available
+To run the linter over all files:
+```npm run format:lint```
+
+To run prettier over all files:
+```npm run format:pretty```
 
 ## Features
 - Sign-up page to create an account

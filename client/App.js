@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Dashboard from './components/dashboard';
-import Login from './components/login';
-import Messages from './components/messages';
-import DirMessage from './components/directMessage';
-import Thread from './components/thread';
-import NavBar from './components/navbar';
-import Signup from './components/signUp';
+import Dashboard from './components/Dashboard';
+import Login from './components/Login';
+import Messages from './components/Messages';
+import DirMessage from './components/DirectMessage';
+import Thread from './components/Thread';
+import NavBar from './components/NavBar';
+import Signup from './components/SignUp';
 import Home from './components/Home';
 import Profile from './components/ProfilePage';
 

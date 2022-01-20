@@ -105,7 +105,7 @@ userController.getAddress = async (req, res, next) => {
     return next({
       log: `Error in userController.getAddress: ${err}`,
       message: {
-        err: 'Error in backend middleware function userController.getAddress'
+        err: 'Error in backend middleware function userController.getAddress',
       },
     });
   }

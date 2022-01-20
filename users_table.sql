@@ -6,7 +6,7 @@ CREATE TABLE public.users (
     "password" varchar NOT NULL,
     "address" varchar NOT NULL,
     "phone_number" varchar NOT NULL,
-    PRIMARY KEY ("_id") 
+    PRIMARY KEY ("_id"),
 );
 
 CREATE TABLE public.threads (
@@ -16,7 +16,8 @@ CREATE TABLE public.threads (
     "event_id" bigint,
     "user_id" bigint,
     "thread_id" bigint,
-    PRIMARY KEY ("_id") 
+    PRIMARY KEY ("_id")
+    FOREIGN KEY ("_id") REFERENCES public.events(id)
 );
 
 CREATE TABLE public.event (
