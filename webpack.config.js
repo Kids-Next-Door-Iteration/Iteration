@@ -15,19 +15,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx)$/, 
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader', 
           options: {
             presets: ['@babel/env', '@babel/react'],
           },
         },
       },
       {
-        test: /.(css|scss)$/,
+        test: /.(css|scss)$/, 
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            }
+          },
+        ],
+        type: 'javascript/auto'
+      }
     ],
   },
   plugins: [

@@ -94,8 +94,7 @@ userController.login = async (req, res, next) => {
 userController.getAddress = async (req, res, next) => {
   const email = req.params.email;
 
-  const queryAddress =
-    'SELECT first_name, last_name, address FROM users WHERE email = $1;';
+  const queryAddress = 'SELECT first_name, last_name, address, email, phone_number FROM users WHERE email = $1;';
   const addressParam = [email];
 
   try {

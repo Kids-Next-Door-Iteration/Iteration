@@ -7,8 +7,10 @@ import axios from 'axios';
 
 function Dashboard() {
   const [dateState, setDateState] = useState(new Date());
-  const [upcoming, setUpcoming] = useState({ thread: [] });
-  const [userName, setUserName] = useState('');
+  const [upcoming, setUpcoming] = useState({thread: []});
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+
 
   const currentUserEmail = sessionStorage.getItem('email');
 
@@ -16,22 +18,21 @@ function Dashboard() {
     setDateState(e);
   };
   useEffect(() => {
-    axios
-      .get('/db/thread/upcoming')
+    axios.get('/db/thread/upcoming')
       .then((res) => {
         console.log(res.data);
-        setUpcoming({ thread: res.data });
+        setUpcoming({thread: res.data});
       })
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
       });
   }, []);
 
-  useEffect(() => {
-    axios
-      .get(`/api/${currentUserEmail}`)
+  useEffect(() =>{
+    axios.get(`/api/${currentUserEmail}`)
       .then((res) => {
-        setUserName(res.data['first_name']);
+        setFirstName(res.data['first_name']);
+        setLastName(res.data['last_name']);
       })
       .catch((e) => {
         console.log(e);
@@ -43,7 +44,8 @@ function Dashboard() {
       <ThreadCard
         event_id={event._id}
         date={event.date}
-        event_name={event.event_name}></ThreadCard>
+        event_name={event.event_name}
+        key={event._id}></ThreadCard>
     );
   });
 
@@ -57,9 +59,10 @@ function Dashboard() {
     }
   });
 
+
   return (
     <div id='dashboardComponent'>
-      <h1>Hello {userName}!</h1>
+      <h1>Hello, {firstName} {lastName}!</h1>
       <h2>Select a date to view events:</h2>
       <div id='calendar-div'>
         <Calendar value={dateState} onChange={changeDate} />

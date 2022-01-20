@@ -99,6 +99,7 @@ function Thread() {
 
   const postList = posts['posts'].map((msg) => {
     return (
+      // eslint-disable-next-line react/jsx-key
       <div className='post'>
         <div className='post-header'>
           <UserInfo

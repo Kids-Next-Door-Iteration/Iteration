@@ -9,6 +9,7 @@ import Thread from './components/Thread';
 import NavBar from './components/NavBar';
 import Signup from './components/SignUp';
 import Home from './components/Home';
+import Profile from './components/ProfilePage';
 
 function App() {
   const loggedIn = sessionStorage.getItem('loggedIn');
@@ -39,6 +40,9 @@ function App() {
         <NavBar />
         <Route exact path='/'>
           <Home />
+        </Route>
+        <Route exact path='/profile'>
+          <Profile />
         </Route>
         <Route path='/dashboard'>
           <Dashboard />
