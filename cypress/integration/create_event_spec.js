@@ -9,9 +9,9 @@ describe('Create New Event', () => {
     cy.clearCookies();
 
     // Check to see if the applicaiton is logged in, if so, log out
-    if (cy.get('#logout-button').contains('Log Out')) {
-      cy.contains('Log Out').click();
-    }
+    // if (cy.get('#logout-button').contains('Log Out')) {
+    //   cy.contains('Log Out').click();
+    // }
 
     cy.contains('Login').click();
 

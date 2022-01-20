@@ -12,7 +12,7 @@ describe('New User Test', () => {
 
     cy.url().should('include', '/signup');
 
-    const email = 'test4@email.com';
+    const email = 'test5@email.com';
 
     cy.get('#email-field')
       .type(email)
