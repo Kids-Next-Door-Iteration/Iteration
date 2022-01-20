@@ -5,7 +5,7 @@ import axios from 'axios';
 import moment from 'moment';
 import Modal from 'react-modal';
 
-function NewEventModal(){    
+function NewEventModal() {    
     //get today's date and format it for backend
     const today = new Date();
     const todayFormatted = moment(today).format('YYYY-MM-DD');

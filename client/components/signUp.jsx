@@ -20,9 +20,7 @@ function signUp() {
 
   const handleSubmit = e => {
       e.preventDefault();
-
-      console.log('submitted')
-
+      
       axios.post('/api/signup', {
         email: state.email,
         password: state.password,
@@ -32,15 +30,13 @@ function signUp() {
         phone_number: state.phoneNum
       })
       .then(function (response) {
-        console.log(response);
         window.location.href = '/login';
       })
       .catch(function (error) {
-        console.log(error);
+        
       });
   }
 
- 
 
   return (
     <div className='signup'>

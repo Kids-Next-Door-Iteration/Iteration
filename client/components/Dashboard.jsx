@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar'
 import moment from 'moment';
 import NewEventModal from './NewEvent';
+import NewDrivingModal from './NewDrivingEvent';
 import ThreadCard from './threadTitleCard';
 import axios from 'axios';
 import { useNavigate, Link } from "react-router-dom";
 
 function Dashboard() {
-  const [dateState, setDateState] = useState(new Date())
-  const [upcoming, setUpcoming] = useState({thread: []})
-  const [userName, setUserName] = useState('')
+  const [dateState, setDateState] = useState(new Date());
+  const [upcoming, setUpcoming] = useState({thread: []});
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
-  const currentUserEmail = sessionStorage.getItem('email')
+
+  const currentUserEmail = sessionStorage.getItem('email');
 
   const changeDate = (e) => {
     setDateState(e)
@@ -20,8 +23,8 @@ function Dashboard() {
   useEffect(() => {
     axios.get('/db/thread/upcoming')
     .then((res) => {
-      console.log(res.data)
-      setUpcoming({thread: res.data})
+      console.log(res.data);
+      setUpcoming({thread: res.data});
     })
     .catch(e => {
       console.log(e);
@@ -31,7 +34,8 @@ function Dashboard() {
   useEffect(() =>{
     axios.get(`/api/${currentUserEmail}`)
     .then((res) => {
-        setUserName(res.data['first_name'])
+        setFirstName(res.data['first_name'])
+        setLastName(res.data['last_name'])
       })
       .catch(e => {
         console.log(e);
@@ -55,7 +59,7 @@ function Dashboard() {
 
   return (
     <div id='dashboardComponent'>
-      <h1>Hello {userName}!</h1>
+      <h1>Hello, {firstName} {lastName}!</h1>
       <h2>Select a date to view events:</h2>
       <div id='calendar-div'>
         <Calendar value={dateState} onChange={changeDate}/>
@@ -65,6 +69,7 @@ function Dashboard() {
             {todaysEvents}
           </div>
           <NewEventModal/>
+          <NewDrivingModal/>
         </div>
          
       </div>

@@ -7,26 +7,19 @@ function Login() {
   const [passwordValue, setPasswordValue] = useState('');
   const [hasError, setHasError] = useState(false);
 
-  const onEmailChange = (e) => {
-    const newValue = e.target.value;
-    setEmailValue(newValue);
-  }
-
-  const onPasswordChange = (e) => {
-    const newValue = e.target.value;
-    setPasswordValue(newValue);
-  }
-  
   const login = ( ) => {
-    axios.post('/api/login', { email: emailValue, password: passwordValue})
+    const loginPayload = { 
+      email: emailValue, 
+      password: passwordValue
+    }
+
+    axios.post('/api/login', loginPayload)
     .then((res) => {
-      console.log(res);
       sessionStorage.setItem('email', emailValue);
       sessionStorage.setItem('loggedIn', res.isMatch);
       window.location.href = '/dashboard';
     })
     .catch(e => {
-      console.log(e);
       setHasError(true);
     })
   }
@@ -35,13 +28,14 @@ function Login() {
     <div id='login-page'>
       <div className='form-group' id='login-form'>
         <p>Email</p>
-        <input className="form-control login-input" type='text' onChange={onEmailChange}/>
+        <input className="form-control login-input" type='text' onChange={(e) => setEmailValue(e.target.value)}/>
         <p>Password</p>
-        <input className="form-control login-input" type='password' onChange={onPasswordChange}/>
+        <input className="form-control login-input" type='password' onChange={(e) => setPasswordValue(e.target.value)}/>
       </div>
       <button className="btn btn-primary" id='loginButton' type='submit' onClick={login}>Log In</button>
       {hasError && <p>Invalid Email or Password</p>}
-      <p>Don't have an account?  Click <Link id='signUp-link' to={'/signup'}>here</Link> to sign up!</p>
+        <p>Don't have an account?  Click 
+        <Link id='signUp-link' to={'/signup'}>  here</Link> to sign up!</p>
     </div>
   );
 }

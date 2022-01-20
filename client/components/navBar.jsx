@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const NavBar = () => {
     const loggedIn = sessionStorage.getItem('loggedIn')
 
@@ -36,22 +37,22 @@ const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                    <a className="nav-link" href="/profile">Profile</a>
-                    <a className="nav-link" href="/dashboard">Dashboard</a>
-                    <a className="nav-link" href="/messages">Messages</a>
-                </div>
-                <div className="navbar-nav" id='logout'>
-                    <button id='logout-button' className="btn btn-secondary" onClick= {logout}>Log Out</button>
-                </div>
+                    <div className="navbar-nav">
+                        <a className="nav-link" href="/profile">Profile</a>
+                        <a className="nav-link" href="/dashboard">Dashboard</a>
+                        <a className="nav-link" href="/messages">Messages</a>
+                    </div>
+
+                     <div className="navbar-nav" id='logout'>
+                         
+                        <button id='logout-button' className="btn btn-secondary" onClick={logout}>Log Out</button>
+                    </div>
                 </div>
             </div>
             </nav>
         </div>
-         )
+        )
     }
-
-
 }
 
 export default NavBar;
