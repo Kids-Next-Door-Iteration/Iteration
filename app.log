@@ -1,0 +1,32 @@
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:21 +0000] "POST /api/signup HTTP/1.1" 200 28 "http://localhost:8080/signup" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:21.325Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:30 +0000] "POST /api/login HTTP/1.1" 200 16 "http://localhost:8080/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:30.225Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:31 +0000] "GET /db/thread/upcoming HTTP/1.1" 200 455 "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:31.317Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:31 +0000] "GET /api/dan@gmail.com HTTP/1.1" 200 54 "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:31.446Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:31 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:31.622Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:31 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:31.848Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:35 +0000] "POST /db/thread HTTP/1.1" 200 144 "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:35.035Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:35 +0000] "GET /db/thread/upcoming HTTP/1.1" 200 512 "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:35.565Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:35 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:35.680Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:35 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:35.819Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:35 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:35.948Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:44 +0000] "POST /api/login HTTP/1.1" 200 16 "http://localhost:8080/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:44.396Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:45 +0000] "GET /api/dan@gmail.com HTTP/1.1" 200 54 "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:45.043Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:45 +0000] "GET /db/thread/upcoming HTTP/1.1" 200 512 "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:45.049Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:45 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:45.343Z"}
+[32minfo[39m: ::ffff:127.0.0.1 - - [20/Jan/2022:03:34:45 +0000] "GET /api/dan@gmail.com HTTP/1.1" 304 - "http://localhost:8080/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.3.1 Chrome/94.0.4606.81 Electron/15.3.4 Safari/537.36"
+ {"timestamp":"2022-01-20T03:34:45.518Z"}

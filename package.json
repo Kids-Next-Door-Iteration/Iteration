@@ -11,7 +11,9 @@
     "test:run": "jest --verbose --forceExit",
     "test:watch": "jest --watchAll --verbose",
     "format:lint": "npx eslint --ext .jsx --ext .js . --fix",
-    "format:pretty": "prettier --write '**/*.{jsx,js,css,html}'"
+    "format:pretty": "prettier --write '**/*.{jsx,js,css,html}'",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -59,6 +61,7 @@
     "babel-preset-env": "^1.7.0",
     "concurrently": "^6.5.1",
     "css-loader": "^6.5.1",
+    "cypress": "^9.3.0",
     "eslint": "^8.5.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",
